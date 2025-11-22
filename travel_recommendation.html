@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Recommendations - あなたの理想の旅行先を見つけよう</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ナビゲーションバー -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- ロゴ/ブランド名 -->
+            <div class="nav-brand">
+                <img src="./flight.png" alt="Travel Logo" />
+                <h1>Travel Recommendations</h1>
+            </div>
+            
+            <!-- ナビゲーションリンク -->
+            <div class="nav-links">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About Us</a>
+                <a href="#contact" class="nav-link">Contact Us</a>
+            </div>
+            
+            <!-- 検索バー -->
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    class="search-input" 
+                    placeholder="Search for beaches, temples, cities..."
+                >
+                <button id="searchBtn" class="btn btn-search">Search</button>
+                <button id="resetBtn" class="btn btn-reset">Reset</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- メインコンテンツエリア -->
+    <main>
+        <!-- ホームセクション -->
+        <article class="home-back">
+            <!-- SNSアイコン -->
+            <div class="social-sidebar">
+                <a href="#" class="social-icon twitter" aria-label="Twitter">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                </a>
+                <a href="#" class="social-icon facebook" aria-label="Facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                </a>
+                <a href="#" class="social-icon instagram" aria-label="Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                </a>
+                <a href="#" class="social-icon youtube" aria-label="YouTube">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                    </svg>
+                </a>
+            </div>
+            
+            <section id="home" class="section home-section">
+                <h2>EXPLORE<br>DREAM<br>DESTINATION</h2>
+                <p>It encourages exploration of unfamiliar territories, embracing diverse cultures and landscapes, while pursuing the desired destination that captivates the heart and ignites a sense of wonder.</p>
+                <a href="#">BOOK NOW</a>
+            </section>
+        </article>
+
+        <!-- 検索結果表示エリア -->
+        <section id="results" class="section results-section">
+            <div id="resultsContainer"></div>
+        </section>
+
+        <!-- Aboutセクション -->
+        <section id="about" class="section about-section">
+            <div class="about-container">
+                <h2>About Us</h2>
+                
+                <!-- 会社概要 -->
+                <div class="company-overview">
+                    <h3>Our Story</h3>
+                    <p>
+                        Travel Recommendations was founded in 2020 with a simple mission: to help travelers discover their dream destinations around the world. We believe that every journey should be memorable, and we're dedicated to providing personalized travel recommendations that match your unique preferences and interests.
+                    </p>
+                    <p>
+                        With years of experience in the travel industry and a passionate team of travel enthusiasts, we've helped thousands of customers explore new cultures, discover hidden gems, and create unforgettable memories. Our expertise spans across continents, from serene beaches to historic temples, vibrant cities to peaceful countryside retreats.
+                    </p>
+                </div>
+
+                <!-- ミッション・ビジョン -->
+                <div class="mission-vision">
+                    <div class="mission">
+                        <h3>Our Mission</h3>
+                        <p>To inspire and enable travelers to explore the world with confidence, providing expert guidance and personalized recommendations for unforgettable experiences.</p>
+                    </div>
+                    <div class="vision">
+                        <h3>Our Vision</h3>
+                        <p>To become the world's most trusted travel recommendation platform, connecting people with their perfect destinations and creating a global community of adventurous travelers.</p>
+                    </div>
+                </div>
+
+                <!-- 従業員リスト -->
+                <div class="team-section">
+                    <h3>Meet Our Team</h3>
+                    <div class="team-grid">
+                        <!-- チームメンバー1 -->
+                        <div class="team-member">
+                            <div class="member-photo">
+                                <img src="./team-member-1.jpg" alt="Sarah Johnson">
+                            </div>
+                            <h4>Sarah Johnson</h4>
+                            <p class="member-role">CEO & Founder</p>
+                            <p class="member-description">With 15 years of experience in the travel industry, Sarah founded Travel Recommendations to share her passion for exploration with the world.</p>
+                        </div>
+
+                        <!-- チームメンバー2 -->
+                        <div class="team-member">
+                            <div class="member-photo">
+                                <img src="./team-member-2.jpg" alt="Michael Chen">
+                            </div>
+                            <h4>Michael Chen</h4>
+                            <p class="member-role">Chief Technology Officer</p>
+                            <p class="member-description">Michael leads our technology team, developing innovative solutions to help travelers find their perfect destinations.</p>
+                        </div>
+
+                        <!-- チームメンバー3 -->
+                        <div class="team-member">
+                            <div class="member-photo">
+                                <img src="./team-member-3.jpg" alt="Emma Rodriguez">
+                            </div>
+                            <h4>Emma Rodriguez</h4>
+                            <p class="member-role">Head of Travel Operations</p>
+                            <p class="member-description">Emma ensures that every recommendation meets our high standards, drawing from her extensive knowledge of global destinations.</p>
+                        </div>
+
+                        <!-- チームメンバー4 -->
+                        <div class="team-member">
+                            <div class="member-photo">
+                                <img src="./team-member-4.jpg" alt="David Kim">
+                            </div>
+                            <h4>David Kim</h4>
+                            <p class="member-role">Marketing Director</p>
+                            <p class="member-description">David brings creative strategies to connect travelers with their dream destinations through engaging campaigns.</p>
+                        </div>
+
+                        <!-- チームメンバー5 -->
+                        <div class="team-member">
+                            <div class="member-photo">
+                                <img src="./team-member-5.jpg" alt="Lisa Anderson">
+                            </div>
+                            <h4>Lisa Anderson</h4>
+                            <p class="member-role">Customer Experience Manager</p>
+                            <p class="member-description">Lisa ensures that every customer receives personalized attention and exceptional service throughout their journey.</p>
+                        </div>
+
+                        <!-- チームメンバー6 -->
+                        <div class="team-member">
+                            <div class="member-photo">
+                                <img src="./team-member-6.jpg" alt="James Wilson">
+                            </div>
+                            <h4>James Wilson</h4>
+                            <p class="member-role">Travel Content Specialist</p>
+                            <p class="member-description">James creates engaging content and guides, helping travelers make informed decisions about their adventures.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Usセクション -->
+        <section id="contact" class="section contact-section">
+            <h2>Contact Us</h2>
+            <!-- Contactフォームはここに追加 -->
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer>
+        <p>&copy; 2024 Travel Recommendations. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScriptファイル -->
+    <script src="travel_recommendation.js"></script>
+</body>
+</html>
